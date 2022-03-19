@@ -3,16 +3,17 @@
   This page is:
   <ul>
     <li>Rendered to HTML.</li>
-    <li>Interactive. <Counter /></li>
-    <li>{{ movie }}</li>
+    <li>{{ page }}</li>
+    <li>{{ blocks }}</li>
+    <li>{{ block }}</li>
   </ul>
 </template>
 
 <script lang="ts" setup>
-import Counter from "../../components/Counter.vue";
-import { PropType } from "vue";
 
 const props = defineProps({
-  movie: Object
-})
+  page: Object,
+  blocks: Object,
+  block: Object,
+});
 </script>

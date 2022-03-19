@@ -3,18 +3,18 @@
 
 import fetch from "node-fetch";
 import { PageContext } from "../../renderer/types";
+import { useNotion } from '../../composables'
 
 export async function onBeforeRender(pageContext: PageContext) {
-  // The route parameter of `/star-wars/:movieId` is available at `pageContext.routeParams`
-  console.log('pageContext', pageContext);
-  
-  // `.page.server.js` files always run in Node.js; we could use SQL/ORM queries here.
-  const response = await fetch(`https://swapi.dev/api/films/1`);
-  let movie = await response.json();
+  const { client } = useNotion();
+
+  const page = await client.pages.retrieve({ page_id: import.meta.env.VITE_HOME_PAGE_ID as string })
+  const blocks = await client.blocks.children.list({ block_id: import.meta.env.VITE_HOME_PAGE_ID as string })
+  const block = await client.blocks.retrieve({ block_id: import.meta.env.VITE_HOME_PAGE_ID as string })
 
   // Our render and hydrate functions we defined earlier pass `pageContext.pageProps` to
   // the root Vue component `Page`; this is where we define `pageProps`.
-  const pageProps = { movie };
+  const pageProps = { page, blocks, block };
 
   // We make `pageProps` available as `pageContext.pageProps`
   return {
