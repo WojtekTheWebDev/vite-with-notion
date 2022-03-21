@@ -1,19 +1,31 @@
-import { Client } from '@notionhq/client';
+import { Client } from "@notionhq/client";
 
 export const useNotion = () => {
-  const client = new Client({ auth: import.meta.env.VITE_NOTION_API_SECRET as string });
+  const client = new Client({
+    auth: import.meta.env.VITE_NOTION_API_SECRET as string,
+  });
+
+  const getBlock = async (blockId: string) => {
+    return await client.blocks.retrieve({ block_id: blockId });
+  };
+
+  const getBlockChildren = async (blockId: string) => {
+    return await client.blocks.children.list({ block_id: blockId });
+  };
 
   const getPage = async (pageId: string) => {
-    return await client.pages.retrieve({ page_id: pageId })
-  }
+    const res = await Promise.all([getBlock(pageId), getBlockChildren(pageId)]);
 
-  const getPageContent = async (pageId: string) => {
-    return await client.pages.retrieve({ page_id: pageId })
-  }
-  
+    return {
+      properties: res[0],
+      content: res[1],
+    };
+  };
+
   return {
     client,
-    getPage,
-    getPageContent
-  }
-}
+    getBlock,
+    getBlockChildren,
+    getPage
+  };
+};
