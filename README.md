@@ -14,12 +14,24 @@ Feel free to contribute!
 
 ## Getting started
 
-1. Clone the repository
+1. Clone the repository.
 
-2. Install dependencies
+2. Install dependencies.
 
 ```bash
 yarn
 ```
 
-3. Follow the steps from Notion's docs - [Getting started](https://developers.notion.com/docs/getting-started)
+3. Follow the steps from Notion's docs - [Getting started](https://developers.notion.com/docs/getting-started).
+
+4. Create `.env` file and add `VITE_HOME_PAGE_ID` environment variable with id of your Notion's integration.
+
+```
+VITE_HOME_PAGE_ID=<YOUR_INTEGRATION_ID>
+```
+
+5. Run the app.
+
+```bash
+yarn dev
+```
