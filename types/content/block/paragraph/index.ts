@@ -1,4 +1,4 @@
-import { Content, RichText, Color } from '../..'
+import { Content, RichText, Color } from '../../..'
 
 export interface Paragraph {
   rich_text: RichText[];

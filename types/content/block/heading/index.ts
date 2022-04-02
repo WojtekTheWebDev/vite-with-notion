@@ -1,4 +1,4 @@
-import { RichText, Color } from "../..";
+import { RichText, Color } from "../../..";
 
 export interface Heading {
   rich_text: RichText[];

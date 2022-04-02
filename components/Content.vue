@@ -7,10 +7,10 @@
 <script lang="ts" setup>
 import { computed } from "@vue/reactivity";
 import { PropType } from "vue";
-import { Page } from "../types";
+import { Content } from "../types";
 
 const props = defineProps({
-  content: Object as PropType<Page["content"]>,
+  content: Object as PropType<Content>,
 });
 
 const results = computed(() => props.content?.results);
