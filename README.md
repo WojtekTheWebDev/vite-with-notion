@@ -40,3 +40,7 @@ VITE_NOTION_API_SECRET=<YOUR_HOME_PAGE_ID>
 ```bash
 yarn dev
 ```
+
+## Demo
+
+Check out the demo here: https://vite-with-notion.netlify.app/
