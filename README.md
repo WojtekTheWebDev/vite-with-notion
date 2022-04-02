@@ -24,13 +24,18 @@ yarn
 
 3. Follow the steps from Notion's docs - [Getting started](https://developers.notion.com/docs/getting-started).
 
-4. Create `.env` file and add `VITE_HOME_PAGE_ID` environment variable with id of your Notion's integration.
+4. Create `.env` file
+
+5. Add `VITE_NOTION_API_SECRET` environment variable with Notion's integration secret.
+
+6. Add `VITE_NOTION_API_SECRET` environment variable with id of your Notion's home page.
 
 ```
-VITE_HOME_PAGE_ID=<YOUR_INTEGRATION_ID>
+VITE_NOTION_API_SECRET=<YOUR_INTEGRATION_SECTER>
+VITE_NOTION_API_SECRET=<YOUR_HOME_PAGE_ID>
 ```
 
-5. Run the app.
+7. Run the app.
 
 ```bash
 yarn dev
