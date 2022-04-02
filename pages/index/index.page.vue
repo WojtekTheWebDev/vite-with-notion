@@ -1,19 +1,15 @@
 <template>
-  <h1>Welcome</h1>
-  This page is:
-  <ul>
-    <li>Rendered to HTML.</li>
-    <li>{{ page }}</li>
-    <li>{{ blocks }}</li>
-    <li>{{ block }}</li>
-  </ul>
+  <article>
+    <Content :content="page?.content" />
+  </article>
 </template>
 
 <script lang="ts" setup>
+import { PropType } from "vue";
+import { Page } from "../../types";
+import Content from "../../components/Content.vue";
 
 const props = defineProps({
-  page: Object,
-  blocks: Object,
-  block: Object,
+  page: Object as PropType<Page>,
 });
 </script>

@@ -15,7 +15,7 @@ export const useNotion = () => {
 
   const getPage = async (pageId: string) => {
     const res = await Promise.all([getBlock(pageId), getBlockChildren(pageId)]);
-
+    
     return {
       properties: res[0],
       content: res[1],
