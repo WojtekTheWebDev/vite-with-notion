@@ -1,15 +1,7 @@
-import { Content } from '../index'
+import { Content, RichText, Color } from '../..'
 
 export interface Paragraph {
-  rich_text: [
-    {
-      type: string;
-      text: {
-        content: string;
-        link: string;
-      };
-    }
-  ];
-  color: string;
+  rich_text: RichText[];
+  color: Color;
   children: Content[];
 }

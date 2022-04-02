@@ -1,4 +1,11 @@
-export type ContentTypes = "paragraph" 
+import { Heading } from "./heading";
+import { Paragraph } from "./paragraph";
+
+export * from "./heading";
+export * from "./paragraph";
+
+export type ContentTypes =
+  | "paragraph"
   | "heading_1"
   | "heading_2"
   | "heading_3"
@@ -16,7 +23,7 @@ export type ContentTypes = "paragraph"
   | "bookmark"
   | "callout"
   | "quote"
-  | "equation" 
+  | "equation"
   | "divider"
   | "table_of_contents"
   | "column"
@@ -27,7 +34,7 @@ export type ContentTypes = "paragraph"
   | "link_to_page"
   | "table"
   | "table_row"
-  | "unsupported"
+  | "unsupported";
 
 export interface Content {
   object: string;
@@ -45,4 +52,8 @@ export interface Content {
   has_children: boolean;
   type: ContentTypes;
   archived: boolean;
+  paragraph?: Paragraph;
+  heading_1?: Heading;
+  heading_2?: Heading;
+  heading_3?: Heading;
 }
