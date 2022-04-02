@@ -1,12 +1,15 @@
 <template>
-  <h1>Welcome</h1>
-  This page is:
-  <ul>
-    <li>Rendered to HTML.</li>
-    <li>Interactive. <Counter /></li>
-  </ul>
+  <article>
+    <Content :content="page?.content" />
+  </article>
 </template>
 
 <script lang="ts" setup>
-import Counter from './Counter.vue'
+import { PropType } from "vue";
+import { Page } from "../../types";
+import Content from "../../components/Content.vue";
+
+const props = defineProps({
+  page: Object as PropType<Page>,
+});
 </script>

@@ -14,12 +14,29 @@ Feel free to contribute!
 
 ## Getting started
 
-1. Clone the repository
+1. Clone the repository.
 
-2. Install dependencies
+2. Install dependencies.
 
 ```bash
 yarn
 ```
 
-3. Follow the steps from Notion's docs - [Getting started](https://developers.notion.com/docs/getting-started)
+3. Follow the steps from Notion's docs - [Getting started](https://developers.notion.com/docs/getting-started).
+
+4. Create `.env` file
+
+5. Add `VITE_NOTION_API_SECRET` environment variable with Notion's integration secret.
+
+6. Add `VITE_NOTION_API_SECRET` environment variable with id of your Notion's home page.
+
+```
+VITE_NOTION_API_SECRET=<YOUR_INTEGRATION_SECTER>
+VITE_NOTION_API_SECRET=<YOUR_HOME_PAGE_ID>
+```
+
+7. Run the app.
+
+```bash
+yarn dev
+```

@@ -1,0 +1,24 @@
+@import "main.scss";
+
+.annotations-bold {
+  font-weight: bold;
+}
+
+.annotations-italic {
+  font-style: italic;
+}
+
+.annotations-strikethrough {
+  text-decoration: line-through;
+}
+
+.annotations-underline {
+  text-decoration: underline;
+}
+
+.annotations-code {
+  background-color: $color-gray_background;
+  font-family: 'Courier New', Courier, monospace;
+  color: $color-default;
+  padding: 0 5px;
+}
