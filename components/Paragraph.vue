@@ -1,13 +1,13 @@
 <template>
-  <h1 v-for="richText in data?.rich_text">
+  <p v-for="richText in data?.rich_text">
     {{ richText.text.content }}
-  </h1>
+  </p>
 </template>
 
 <script lang="ts" setup>
 import { PropType } from "vue";
-import { Heading } from "../types";
+import { Paragraph } from "../types";
 defineProps({
-  data: Object as PropType<Heading>,
+  data: Object as PropType<Paragraph>,
 });
 </script>
