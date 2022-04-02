@@ -1,3 +1,5 @@
+import { Annotations } from "../annotations";
+
 export type RichTextTypes = "text" | "mention" | "equation";
 
 export interface RichTextLink {
@@ -6,8 +8,10 @@ export interface RichTextLink {
 }
 
 export interface RichText {
+  plain_text: string;
+  annotations: Annotations;
   type: RichTextTypes;
-  text: {
+  text?: {
     content: string;
     link?: RichTextLink;
   };
