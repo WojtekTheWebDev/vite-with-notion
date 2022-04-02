@@ -24,6 +24,6 @@ import Link from "./Link.vue";
 .layout {
   display: flex;
   margin: auto;
-  max-width: 1440px;
+  max-width: 1140px;
 }
 </style>
