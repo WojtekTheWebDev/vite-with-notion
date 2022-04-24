@@ -53,10 +53,6 @@ const emoji = computed(() => {
   }
 }
 
-.p-card .p-card-content {
-  padding: 0 !important;
-}
-
 .callout {
   &--header {
     padding: 1rem 1rem 0 1rem;
