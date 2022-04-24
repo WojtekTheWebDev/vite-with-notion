@@ -4,6 +4,7 @@
     <Heading2 v-if="block.type === 'heading_2'" :data="block.heading_2" />
     <Heading3 v-if="block.type === 'heading_3'" :data="block.heading_3" />
     <Paragraph v-if="block.type === 'paragraph'" :data="block.paragraph" />
+    <Callout v-if="block.type === 'callout'" :data="block.callout" />
     <ToDo v-if="block.type === 'to_do'" :data="block.to_do" />
   </section>
 </template>
@@ -16,6 +17,7 @@ import Heading1 from "./Heading1.vue";
 import Heading2 from "./Heading2.vue";
 import Heading3 from "./Heading3.vue";
 import Paragraph from "./Paragraph.vue";
+import Callout from "./Callout.vue";
 import ToDo from "./ToDo.vue";
 
 
@@ -25,5 +27,3 @@ const props = defineProps({
 
 const results = computed(() => props.content?.results);
 </script>
-
-<style></style>
