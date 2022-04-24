@@ -4,10 +4,6 @@
   color: $color-text;
 }
 
-.color-default {
-  color: $color-default;
-}
-
 .color-gray {
   color: $color-gray;
 }
@@ -60,7 +56,7 @@
   background-color: $color-green_background;
 }
 .color-blue_background {
-  background-color: $color-blue_background;
+  background-color: $color-blue_background !important;
 }
 .color-purple_background {
   background-color: $color-purple_background;

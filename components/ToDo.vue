@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType, ref } from "vue";
+import { PropType } from "vue";
 import { ToDo } from "../types";
 import RichText from "./RichText.vue";
 import Checkbox from 'primevue/checkbox';
@@ -18,10 +18,15 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .to-do {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
 }
 
 .checkbox {
   margin-right: 0.5rem;
 }
+</style>
+
+<style lang="scss" scoped>
+@import "assets/css/annotations.scss";
+@import "assets/css/colors.scss";
 </style>

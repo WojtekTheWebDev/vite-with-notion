@@ -1,6 +1,8 @@
 import { Block } from "..";
+import { File } from "../../../file";
 import { Color } from "../../../color";
 import { RichText } from "../../../richText";
+import { Emoji } from "../../../emoji";
 
 /**
  * Callout block object.
@@ -13,7 +15,7 @@ export interface Callout {
   /**
    * Callout icon.
    */
-  icon: null,
+  icon: File | Emoji,
   /**
    * Color of the block.
    */
