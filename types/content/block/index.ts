@@ -1,10 +1,12 @@
 import { Heading } from "./heading";
 import { Paragraph } from "./paragraph";
 import { ToDo } from "./toDo";
+import { Callout } from "./callout";
 
 export * from "./heading";
 export * from "./paragraph";
 export * from "./toDo";
+export * from "./callout";
 
 export type BlockTypes =
   | "paragraph"
@@ -59,4 +61,5 @@ export interface Block {
   heading_2?: Heading;
   heading_3?: Heading;
   to_do?: ToDo;
+  callout?: Callout;
 }
