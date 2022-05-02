@@ -1,5 +1,5 @@
 <template>
-  <p :class="`color-${data?.color}`">
+  <p class="paragraph" :class="`color-${data?.color}`">
     <RichText v-for="richText in data?.rich_text" :rich-text="richText" />
   </p>
 </template>
@@ -12,3 +12,12 @@ defineProps({
   data: Object as PropType<Paragraph>,
 });
 </script>
+
+<style lang="scss" scoped>
+@import "assets/css/annotations.scss";
+@import "assets/css/colors.scss";
+
+.paragraph {
+  min-height: 1rem;
+}
+</style>

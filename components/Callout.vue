@@ -48,14 +48,20 @@ const emoji = computed(() => {
   box-shadow: none;
   display: flex;
 
-  :deep(.p-card-content) {
-    padding: 0;
+  :deep(.p-card-body) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .p-card-content {
+      padding: 0;
+    }
   }
 }
 
 .callout {
   &--header {
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
   }
 
   &--emoji {
