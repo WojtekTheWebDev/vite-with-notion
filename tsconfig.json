@@ -8,7 +8,10 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "~/*": ["./*"]
+    }
   },
   "ts-node": {
     "transpileOnly": true,

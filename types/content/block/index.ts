@@ -1,45 +1,46 @@
-import { Heading } from "./heading";
-import { Paragraph } from "./paragraph";
-import { ToDo } from "./toDo";
-import { Callout } from "./callout";
+import { Heading, Paragraph, ToDo, Callout, Quote } from "~/types";
 
 export * from "./heading";
 export * from "./paragraph";
 export * from "./toDo";
 export * from "./callout";
+export * from "./quote";
 
-export type BlockTypes =
-  | "paragraph"
-  | "heading_1"
-  | "heading_2"
-  | "heading_3"
-  | "bulleted_list_item"
-  | "numbered_list_item"
-  | "to_do"
-  | "toggle"
-  | "child_page"
-  | "child_database"
-  | "embed"
-  | "image"
-  | "video"
-  | "file"
-  | "pdf"
-  | "bookmark"
-  | "callout"
-  | "quote"
-  | "equation"
-  | "divider"
-  | "table_of_contents"
-  | "column"
-  | "column_list"
-  | "link_preview"
-  | "synced_block"
-  | "template"
-  | "link_to_page"
-  | "table"
-  | "table_row"
-  | "unsupported";
-
+/**
+ * Every block object has a key corresponding to the value of `type`. Under the key is an object with type-specific block information.
+ */
+export enum BlockTypes {
+  Paragraph = "paragraph",
+  Heading1 = "heading_1",
+  Heading2 = "heading_2",
+  Heading3 = "heading_3",
+  BulletedListItem = "bulleted_list_item",
+  NumberedListItem = "numbered_list_item",
+  ToDo = "to_do",
+  Toggle = "toggle",
+  ChildPage = "child_page",
+  ChildDatabase = "child_database",
+  Embed = "embed",
+  Image = "image",
+  Video = "video",
+  File = "file",
+  Pdf = "pdf",
+  Bookmark = "bookmark",
+  Callout = "callout",
+  Quote = "quote",
+  Equation = "equation",
+  Divider = "divider",
+  TableOfContents = "table_of_contents",
+  Column = "column",
+  ColumnList = "column_list",
+  LinkPreview = "link_preview",
+  SyncedBlock = "synced_block",
+  Template = "template",
+  LinkToPage = "link_to_page",
+  Table = "table",
+  TableRow = "table_row",
+  Unsupported = "unsupported",
+}
 export interface Block {
   object: string;
   id: string;
@@ -62,4 +63,5 @@ export interface Block {
   heading_3?: Heading;
   to_do?: ToDo;
   callout?: Callout;
+  quote?: Quote;
 }

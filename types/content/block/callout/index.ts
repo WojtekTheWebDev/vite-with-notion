@@ -1,10 +1,13 @@
-import { Block, File, Color, RichText, Emoji } from "../../..";
+import { Block, File, Color, RichText, Emoji } from "~/types";
 
 /**
  * Callout block object.
  */
 export interface Callout {
-  rich_text: RichText[];
+  /**
+   * Rich text in the callout block.
+   */
+  rich_text: RichText;
   /**
    * Callout icon.
    */
